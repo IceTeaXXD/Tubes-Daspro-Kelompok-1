@@ -2,7 +2,7 @@ import Algo
 
 userData, gameData, kepemilikanData, riwayatData = Algo.load()
 role = ''
-
+saved = False
 while True:
     Algo.clear()
     Algo.help(role)
@@ -31,11 +31,13 @@ while True:
         elif pilih == '7':
             Algo.search_game_at_store(gameData)
         elif pilih == '8':
-            Algo.help(role)
+            Algo.topup(userData,role)
         elif pilih == '9':
-            Algo.save(userData,gameData,kepemilikanData,riwayatData)
+            Algo.help(role)
         elif pilih == '10':
-            Algo.Exit()
+            saved = Algo.save(userData,gameData,kepemilikanData,riwayatData)
+        elif pilih == '11':
+            Algo.Exit(saved)
             break
     
     elif role == 'user':
@@ -44,21 +46,21 @@ while True:
         elif pilih == '2':
             Algo.list_game_toko(gameData)
         elif pilih == '3':
-            Algo.buy_game(userData,gameData,kepemilikanData,riwayatData,userid,nama,role,saldo)
+            Algo.buy_game(userData,gameData,kepemilikanData,riwayatData,userid,role,saldo)
         elif pilih == '4':
-            Algo.list_game(gameData,riwayatData,nama,role)
+            Algo.list_game(gameData,riwayatData,userid,role)
         elif pilih == '5':
-            Algo.search_my_game(gameData,riwayatData,nama,role)
+            Algo.search_my_game(gameData,riwayatData,userid,role)
         elif pilih == '6':
             Algo.search_game_at_store(gameData)
         elif pilih == '7':
-            Algo.riwayat(riwayatData,nama,role)
+            Algo.riwayat(gameData,riwayatData,userid,role)
         elif pilih == '8':
             Algo.help(role)
         elif pilih == '9':
-            Algo.save(userData,gameData,kepemilikanData,riwayatData)
+            saved = Algo.save(userData,gameData,kepemilikanData,riwayatData)
         elif pilih == '10':
-            Algo.Exit()
+            Algo.Exit(userData,gameData,kepemilikanData,riwayatData,saved)
             break
         
     Algo.batas()

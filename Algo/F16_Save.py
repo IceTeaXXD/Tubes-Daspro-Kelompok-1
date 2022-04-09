@@ -3,7 +3,13 @@ from .Functions import*
 def save(userData,gameData,kepemilikanData,riwayatData):
     path = './'
     os.chdir(path)
+    
     namaFolder = input('Masukan nama folder penyimpanan: ')
+
+    while length_of_obj(namaFolder) == 0:
+        print('Nama folder tidak boleh kosong!')
+        namaFolder = input('Masukan nama folder penyimpanan: ')
+
     if not os.path.exists(namaFolder):
         os.mkdir(namaFolder)
 
@@ -16,3 +22,6 @@ def save(userData,gameData,kepemilikanData,riwayatData):
     saving(gameData,namaFolder,'game')
     saving(kepemilikanData,namaFolder,'kepemilikan')
     saving(riwayatData,namaFolder,'riwayat')
+
+    return True
+    

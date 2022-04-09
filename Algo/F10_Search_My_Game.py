@@ -1,6 +1,6 @@
 from .Functions import*
 
-def search_my_game(gameData,riwayatData,nama,role):
+def search_my_game(gameData,riwayatData,userid,role):
     if role == "user":
         idGame = input('Masukan id game: ')
         tahunRilis = input('Masukan tahun rilis: ')
@@ -8,8 +8,7 @@ def search_my_game(gameData,riwayatData,nama,role):
         arr_idGame = []
         arr_tahunRilis = []
 
-        arr_my_game = list_game_dimiliki(gameData,riwayatData,nama)
-
+        arr_my_game = list_game_dimiliki(gameData,riwayatData,userid)
         if idGame == '' and tahunRilis == '':
             print('Maaf, id game dan tahun rilis tidak boleh kosong!')
             return

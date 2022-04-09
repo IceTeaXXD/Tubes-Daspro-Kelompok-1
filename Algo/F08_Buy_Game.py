@@ -1,5 +1,6 @@
 from .Functions import*
-def buy_game(userData,gameData,kepemilikanData,riwayatData,userid,nama,role,saldo):
+
+def buy_game(userData,gameData,kepemilikanData,riwayatData,userid,role,saldo):
     if role == "user":
         saldo_ = int(saldo)
         indeks = 0
@@ -14,6 +15,7 @@ def buy_game(userData,gameData,kepemilikanData,riwayatData,userid,nama,role,sald
         
         hargaGame = int(gameData[indeks][4])
         stokGame = int(gameData[indeks][5])
+        namaGame = gameData[indeks][1]
 
         if isOwned(kepemilikanData,idGame,userid):
             print('Anda sudah memiliki game tersebut!')
@@ -37,8 +39,8 @@ def buy_game(userData,gameData,kepemilikanData,riwayatData,userid,nama,role,sald
             kepemilikanData += [temp_kepemilikan]
 
             # Menambahkan data pembelian ke riwayat data pembelian
-            temp_riwayat = [idGame,nama,hargaGame,userid,'2022']
-            riwayatData += [temp_riwayat]
+            tahun = str(date.today().year)
+            riwayatData += [[idGame,namaGame,str(hargaGame),userid,tahun]]
 
             print(f'Selamat! Anda telah membeli game {gameData[indeks][1]}')
 

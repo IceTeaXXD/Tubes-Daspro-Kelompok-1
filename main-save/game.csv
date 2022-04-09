@@ -1,9 +1,10 @@
 id;nama;kategori;tahun_rilis;harga;stok
-G001;Elden Ring;Adventure;2022;700000;10
-G002;Valhalla;Adventure;2021;40000;10
-G003;COD MW;Action;2020;500000;10
+G001;Elden Ring;Adventure;2022;700000;9
+G002;Valhalla;Adventure;2021;40000;9
+G003;COD MW;Action;2020;500000;9
 G004;Zelda;Classic;2002;100000;10
-G005;GTAV;Simulation;2015;150000;10
-G006;Fifa22;Sports;2021;250000;10
-G007;Fisika Dasar ;Horror;2022;10000000;10
-G008;Read Dead Redemption 2;Action;2018;300000;59
+G005;GTAV;Simulation;2015;150000;9
+G006;Fifa22;Sports;2021;250000;9
+G007;Fisika Dasar ;Horror;2022;10000000;9
+G008;Read Dead Redemption 2;Action;2018;300000;58
+G009;Dasar Pemrograman : Semester 2;Education;2022;10;549

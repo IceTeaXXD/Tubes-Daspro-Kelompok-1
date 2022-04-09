@@ -22,9 +22,10 @@ def help(role):
         print('5. Ubah Stok')
         print('6. Listing Game Toko')
         print('7. Cari Game Toko')
-        print('8. Help')
-        print('9. Save')
-        print('10. Exit')
+        print('8. Top Up')
+        print('9. Help')
+        print('10. Save')
+        print('11. Exit')
     else:
         print('1. Login')
         print('2. Help')
