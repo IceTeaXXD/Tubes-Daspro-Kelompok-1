@@ -1,0 +1,17 @@
+from Algo.Functions import*
+from Algo.F02_Register import*
+from Algo.F03_Login import*
+from Algo.F04_Tambah_Game import*
+from Algo.F05_Ubah_Game import*
+from Algo.F06_Ubah_Stok import*
+from Algo.F07_List_Game_Toko import*
+from Algo.F08_Buy_Game import*
+from Algo.F09_List_Game import*
+from Algo.F10_Search_My_Game import*
+from Algo.F11_Search_Game_At_Store import*
+from Algo.F12_Topup import*
+from Algo.F13_Riwayat_Pembelian import*
+from Algo.F14_Help import*
+from Algo.F15_Load import* 
+from Algo.F16_Save import*
+from Algo.F17_Exit import*
