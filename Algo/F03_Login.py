@@ -1,4 +1,5 @@
 from .Functions import*
+from .B01_Cipher import*
 
 def login(userData):
     print("Login")
@@ -10,7 +11,7 @@ def login(userData):
 
         # Check whether the username and password is valid
         for i in range(length_of_obj(userData)):
-            if username == userData[i][1] and password == userData[i][3]:
+            if username == userData[i][1] and Cipher(password) == userData[i][3]:
                 print(f"Halo {username} selamat datang di BNMO!")
                 loginValid = True
                 indeks = i

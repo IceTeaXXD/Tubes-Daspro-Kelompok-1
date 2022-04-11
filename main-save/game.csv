@@ -1,4 +1,4 @@
-id;nama;kategori;tahun_rilis;harga;stok
+id;nama_game;kategori;tahun_rilis;harga;stok
 G001;Elden Ring;Adventure;2022;700000;9
 G002;Valhalla;Adventure;2021;40000;9
 G003;COD MW;Action;2020;500000;9

@@ -19,3 +19,4 @@ def list_game_toko(gameData):
         bikinTabel(list_sorted,'game')
     else:
         print('Skema sorting tidak valid')
+    quicksort(gameData,0,'ascending')

@@ -30,9 +30,6 @@ def search_my_game(gameData,riwayatData,userid,role):
                 arr_search += [arr_my_game[i]]
 
         if length_of_obj(arr_search) != 0:
-            print('Daftar game anda yang memenuhi kriteria:')
-            print('hahahaha')
-            print(arr_search)
             bikinTabel(arr_search,'owned')
 
         else:

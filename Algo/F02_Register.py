@@ -1,4 +1,5 @@
 from .Functions import*
+from .B01_Cipher import*
 
 def register(userData,role):
     if role == 'admin':
@@ -40,10 +41,13 @@ def register(userData,role):
                 print("Password harus memiliki minimal 1 huruf besar, silakan ulangi input!")
             elif not any(char.islower() for char in password):
                 print("Password harus memiliki minimal 1 huruf kecil, silakan ulangi input!")
+            # password tidak boleh memiliki spasi
+            elif ' ' in password:
+                print("Password tidak boleh memiliki spasi, silakan ulangi input!")
             else:
                 break
-
-        data_user = [str(length_of_obj(userData)+1), username,nama,password,'user','0']
+        password = Cipher(password)
+        data_user = [str(length_of_obj(userData)+1),username,nama,password,'user','0']
         userData += [data_user]
         print("Registrasi Berhasil!")
     else:

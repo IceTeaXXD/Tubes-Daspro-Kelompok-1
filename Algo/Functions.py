@@ -4,7 +4,6 @@ import sys
 import math
 import time
 from datetime import date
-from tabulate import tabulate
 
 def csv_to_arr(folder,filename):
     if filename == 'user' or filename == 'game':
@@ -28,6 +27,7 @@ def csv_to_arr(folder,filename):
                 tmp += c
         if tmp:
             arr += [tmp]
+            
     # create matrix
     new_arr=[["" for j in range(kolom)] for i in range(length_of_obj(arr)//kolom)]
     count = 0
@@ -55,16 +55,23 @@ def saving(data,namaFolder,filename):
             else:
                 f.write(';')
 
-def quicksort(arr,indeks,dataType):
-    if dataType == 'ascending':
-        for i in range(len(arr)):
-            for j in range(i+1,len(arr)):
+def quicksort(arr,indeks,sortType):
+    if indeks == 0:
+        for i in range(length_of_obj(arr)):
+            for j in range(i+1,length_of_obj(arr)):
                 if arr[i][indeks] > arr[j][indeks]:
+                    arr[i],arr[j] = arr[j],arr[i]        
+
+    elif sortType == 'ascending':
+        for i in range(length_of_obj(arr)):
+            for j in range(i+1,length_of_obj(arr)):
+                if int(arr[i][indeks]) > int(arr[j][indeks]):
                     arr[i],arr[j] = arr[j],arr[i] 
-    elif dataType == 'descending':
-        for i in range(len(arr)):
-            for j in range(i+1,len(arr)):
-                if arr[i][indeks] < arr[j][indeks]:
+                    
+    elif sortType == 'descending':
+        for i in range(length_of_obj(arr)):
+            for j in range(i+1,length_of_obj(arr)):
+                if int(arr[i][indeks]) < int(arr[j][indeks]):
                     arr[i],arr[j] = arr[j],arr[i]    
     return arr
 
@@ -181,21 +188,20 @@ def bikinTabel(list,jenisTabel):
                 longest1 = length_of_obj(str(item[1]))
 
         for item in list:
-            if length_of_obj(str(item[2])) > longest2:
+            if length_of_obj(str(item[4])) > longest2:
                 longest2 = length_of_obj(str(item[2]))
 
         for item in list:
-            if length_of_obj(str(item[4])) > longest3:
-                longest3 = length_of_obj(str(item[4]))
+            if length_of_obj(str(item[5])) > longest3:
+                longest3 = length_of_obj(str(item[5]))
 
         print(kaliString('=',longest0+longest1+longest2+longest3+17))
         print('|',kolom0,kaliString(' ',(longest0-length_of_obj(kolom0))),'|',kolom1,kaliString(' ',(longest1-length_of_obj(kolom1)+1))+'|',kolom2,kaliString(' ',(longest2-length_of_obj(kolom2)+1))+'|',kolom3,kaliString(' ',(longest3-length_of_obj(kolom3)+1))+'|')
         print(kaliString('=',longest0+longest1+longest2+longest3+17))
 
         for item in list:
-            print('|',item[0],kaliString(' ',(longest0-length_of_obj(str(item[0])))),'|',item[1],kaliString(' ',(longest1-length_of_obj(str(item[1])))),'|',item[2],kaliString(' ',(longest2-length_of_obj(item[2]))),'|',item[4],kaliString(' ',(longest3-length_of_obj(str(item[4])))),'|')
+            print('|',item[0],kaliString(' ',(longest0-length_of_obj(str(item[0])))),'|',item[1],kaliString(' ',(longest1-length_of_obj(str(item[1])))),'|',item[4],kaliString(' ',(longest2-length_of_obj(item[4]))),'|',item[5],kaliString(' ',(longest3-length_of_obj(str(item[5])))),'|')
         print(kaliString('=',longest0+longest1+longest2+longest3+17))
-
 
 def longestString(string,kali):
     hasil = ''
@@ -226,7 +232,8 @@ def list_game_dimiliki(gameData,riwayatData,userid):
                     kategoriGame = gameData[j][2]
                     tahunRilis = gameData[j][3]
                     hargaGame = gameData[j][4]
-            list_game_dimiliki += [[idGame, namaGame, kategoriGame, tahunRilis, hargaGame]]    
+                    tahunBeli = riwayatData[i][4]
+            list_game_dimiliki += [[idGame, namaGame, kategoriGame, tahunRilis, hargaGame, tahunBeli]]    
     return list_game_dimiliki
 
 def clear():

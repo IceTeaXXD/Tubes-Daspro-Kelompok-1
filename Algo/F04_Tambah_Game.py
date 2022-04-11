@@ -10,11 +10,11 @@ def tambah_game(gameData,role):
             stokAwal = input('Masukan stok awal: ') 
 
             jumlah_game = hitungGame(gameData)
-            if jumlah_game < 10: 
+            if jumlah_game < 9: 
                 idGame = 'G00' + str(hitungGame(gameData)+1)
-            elif jumlah_game < 100:
+            elif jumlah_game < 99:
                 idGame = 'G0' + str(hitungGame(gameData)+1)
-            elif jumlah_game >= 100:
+            elif jumlah_game >= 99:
                 idGame = 'G' + str(hitungGame(gameData)+1)
 
             if namaGame != '' and kategori != '' and tahunRilis != '' and harga != '' and stokAwal != '':

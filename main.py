@@ -3,6 +3,7 @@ import Algo
 userData, gameData, kepemilikanData, riwayatData = Algo.load()
 role = ''
 saved = False
+
 while True:
     Algo.clear()
     Algo.help(role)
@@ -37,8 +38,12 @@ while True:
         elif pilih == '10':
             saved = Algo.save(userData,gameData,kepemilikanData,riwayatData)
         elif pilih == '11':
-            Algo.Exit(saved)
+            Algo.Exit(userData,gameData,kepemilikanData,riwayatData,saved)
             break
+        elif pilih == '12':
+            Algo.kerangajaib()
+        elif pilih == '13':
+            Algo.TicTacToe()
     
     elif role == 'user':
         if pilih == '1':
@@ -62,6 +67,9 @@ while True:
         elif pilih == '10':
             Algo.Exit(userData,gameData,kepemilikanData,riwayatData,saved)
             break
-        
+        elif pilih == '11':
+            Algo.kerangajaib()
+        elif pilih == '12':
+            Algo.TicTacToe()
     Algo.batas()
     input('Press Enter To Continue >>>  ')

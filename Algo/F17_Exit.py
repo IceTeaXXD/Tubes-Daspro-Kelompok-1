@@ -7,7 +7,7 @@ def Exit(userData,gameData,kepemilikanData,riwayatData,saved):
         print('Terima kasih telah menggunakan aplikasi ini.')
         print('Sampai jumpa lagi!')
     else:
-        pilih = input('Apakah anda ingin melakukan save terlebih dahulu? (y/n)')
+        pilih = input('Apakah anda ingin melakukan save terlebih dahulu (y/n) ? ')
         if pilih == 'y':
             save(userData,gameData,kepemilikanData,riwayatData)
             os.system('cls')

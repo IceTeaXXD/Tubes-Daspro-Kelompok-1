@@ -13,6 +13,9 @@ def help(role):
         print('8. Help')
         print('9. Save')
         print('10. Exit')
+        print('==========BONUS==========')
+        print('11. Magic Conch Shell')
+        print('12. Tic Tac Toe')
 
     elif role == 'admin':
         print('1. Register')
@@ -26,6 +29,9 @@ def help(role):
         print('9. Help')
         print('10. Save')
         print('11. Exit')
+        print('==========BONUS==========')
+        print('12. Magic Conch Shell')
+        print('13. Tic Tac Toe')
     else:
         print('1. Login')
         print('2. Help')

@@ -15,3 +15,6 @@ from Algo.F14_Help import*
 from Algo.F15_Load import* 
 from Algo.F16_Save import*
 from Algo.F17_Exit import*
+from Algo.B01_Cipher import*
+from Algo.B02_Magic_Conch_Shell import*
+from Algo.B03_TicTacToe import*
