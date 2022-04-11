@@ -15,12 +15,3 @@ def Cipher(text):
     for i in range(length_of_obj(text)):
         cipheredText += chars_arr[(searchIndex(text[i])*a + b)%m-1]
     return cipheredText
-
-def Decipher(text):
-    decipheredText = ""
-    a = 5
-    b = 1
-    m = length_of_obj(chars_arr)
-    for i in range(length_of_obj(text)):
-        decipheredText += chars_arr[(searchIndex(text[i])*a - b)%m-1]
-    return decipheredText

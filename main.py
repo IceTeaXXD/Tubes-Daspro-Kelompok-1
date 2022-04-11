@@ -10,6 +10,7 @@ while True:
     Algo.batas()
     pilih = input('Pilih nomor menu: ')
     Algo.batas()
+    Algo.clear()
     if role == '':
         if pilih == '1':
             userid,username,nama,password,role,saldo = Algo.login(userData)

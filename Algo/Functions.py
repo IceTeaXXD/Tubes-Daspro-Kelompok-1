@@ -14,20 +14,21 @@ def csv_to_arr(folder,filename):
         kolom = 5
 
     arr = []
+    count = 0
     csv = open(f'./{folder}/{filename}.csv')
-    next(csv)
     for row in csv:
-        ch = ';'
+        parser = ';'
         tmp = ''
-        for c in row:
-            if c == ch or c == '\n':
+        if count != 0:
+            for c in row:
+                if c == parser or c == '\n':
+                    arr += [tmp]
+                    tmp = ''
+                else:
+                    tmp += c
+            if tmp:
                 arr += [tmp]
-                tmp = ''
-            else:
-                tmp += c
-        if tmp:
-            arr += [tmp]
-            
+        count += 1
     # create matrix
     new_arr=[["" for j in range(kolom)] for i in range(length_of_obj(arr)//kolom)]
     count = 0

@@ -50,11 +50,14 @@ def TicTacToe():
             char = ' O '
         
         while True:
-            pos = int(input('Pilih posisi: '))
-            if arr[pos-1] == '   ':
-                arr[pos-1] = char
-                break
-            elif pos == 1 or pos == 2 or pos == 3 or pos == 4 or pos == 5 or pos == 6 or pos == 7 or pos == 8 or pos == 9:
-                print('Posisi sudah terisi')
-            else:
-                print('Input tidak valid!')
+            try:
+                pos = int(input('Pilih posisi: '))
+                if arr[pos-1] == '   ':
+                    arr[pos-1] = char
+                    break
+                elif pos == 1 or pos == 2 or pos == 3 or pos == 4 or pos == 5 or pos == 6 or pos == 7 or pos == 8 or pos == 9:
+                    print('Posisi sudah terisi')
+                else:
+                    print('Input tidak valid!')
+            except:
+                print('Input tidak valid')

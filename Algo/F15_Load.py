@@ -1,7 +1,7 @@
 from .Functions import*
 
 def load():
-    os.system('cls')
+    clear()
     # Loading Argument
     parser = argparse.ArgumentParser(description='Masukkan Nama Folder!')
     parser.add_argument('NamaFolder', type=str, help='Nama folder tempat penyimpanan file csv')
