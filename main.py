@@ -1,6 +1,36 @@
 import Algo
 
 userData, gameData, kepemilikanData, riwayatData = Algo.load()
+
+### Data csv akan diubah menjadi sebuah matriks
+
+### Bentuk data userData
+# userData[x][0] = id user
+# userData[x][1] = username
+# userData[x][2] = nama pengguna
+# userData[x][3] = password
+# userData[x][4] = role
+# userData[x][5] = saldo
+
+### Bentuk data gameData
+# gameData[x][0] = id game
+# gameData[x][1] = nama game
+# gameData[x][2] = kategori
+# gameData[x][3] = tahun rilis
+# gameData[x][4] = harga
+# gameData[x][5] = stok awal
+
+### Bentuk data kepemilikanData
+# kepemilikanData[x][0] = id user
+# kepemilikanData[x][1] = id game
+# kepemilikanData[x][2] = jumlah
+
+### Bentuk data riwayatData
+# riwayatData[x][0] = id user
+# riwayatData[x][1] = id game
+# riwayatData[x][2] = jumlah
+
+
 role = ''
 saved = False
 

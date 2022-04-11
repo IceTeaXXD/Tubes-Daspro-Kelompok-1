@@ -1,7 +1,7 @@
 from .Functions import*
 from .B01_Cipher import*
 
-def register(userData,role):
+def register(userData,role):    # Menerima data user dan role user sebagai parameter
     if role == 'admin': # Validasi Role
         print("Register")
         # Input Data

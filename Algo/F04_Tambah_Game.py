@@ -1,22 +1,24 @@
 from .Functions import*
 
-def tambah_game(gameData,role):
-    if role == 'admin':
+def tambah_game(gameData,role): # Menerima gameData dan role user sebagai parameter
+    if role == 'admin': # Validasi apakah role yang menjalankan adalah admin
         while True:
+            # Menerima inputan dari user
             namaGame = input('Masukan nama game: ')
             kategori = input('Masukan kategori: ')
             tahunRilis = input('Masukan tahun rilis: ')
             harga = input('Masukan harga game: ')
             stokAwal = input('Masukan stok awal: ') 
+            jumlah_game = hitungGame(gameData)  # Menghitung jumlah game yang ada untuk menentukan id game baru
 
-            jumlah_game = hitungGame(gameData)
             if jumlah_game < 9: 
-                idGame = 'GAME00' + str(hitungGame(gameData)+1)
+                idGame = 'GAME00' + str(jumlah_game+1)
             elif jumlah_game < 99:
-                idGame = 'GAME0' + str(hitungGame(gameData)+1)
+                idGame = 'GAME0' + str(jumlah_game+1)
             elif jumlah_game >= 99:
-                idGame = 'GAME' + str(hitungGame(gameData)+1)
+                idGame = 'GAME' + str(jumlah_game+1)
 
+            # Memasukkan data ke dalam gameData dengan syarat tidak ada data yang kosong
             if namaGame != '' and kategori != '' and tahunRilis != '' and harga != '' and stokAwal != '':
                 data = [idGame,namaGame, kategori, tahunRilis, harga, stokAwal]
                 gameData += [data]
