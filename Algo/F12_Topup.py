@@ -10,9 +10,9 @@ def topup(userData,role):
                 break
         if indeks != 0:
             saldo = int(input('Masukan jumlah saldo yang ingin ditambahkan: '))
-            if saldo > 0:
+            if saldo + int(userData[i][5]) >= 0 :
                 userData[indeks][5] = str(int(userData[indeks][5]) + saldo)
-                print(f'Top up berhasil! Saldo {userName} bertambah menjadi {userData[indeks][5]}')
+                print(f'Top up berhasil! Saldo {userName} menjadi {userData[indeks][5]}')
             else:
                 print('Maaf, jumlah saldo tidak valid!')
         else:
