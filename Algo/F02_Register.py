@@ -38,6 +38,7 @@ def register(userData,role):
             # Syarat password pada algoritma ini:
             # 1. Password harus terdiri >= 8 karakter
             # 2. Password harus teridiri atas minimal 1 huruf besar, 1 huruf kecil, dan 1 angka
+            # 3. Password tidak boleh memiliki spasi
             if length_of_obj(password) < 8: 
                 print("Password minimal terdiri atas 8 karakter, silakan ulangi input!")
             elif not any(char.isdigit() for char in password):
@@ -53,7 +54,7 @@ def register(userData,role):
                 break
 
         password = Cipher(password) # Melakukan enkripsi password
-        
+
         # Memasukkan data yang telah diinput ke dalam array semua data user
         data_user = [str(length_of_obj(userData)+1),username,nama,password,'user','0']
         userData += [data_user]
