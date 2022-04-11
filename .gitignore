@@ -1,2 +1,6 @@
 *.pyc
 __pycache__/
+tes.py
+tes.csv
+tictactoe.py
+affine.py
