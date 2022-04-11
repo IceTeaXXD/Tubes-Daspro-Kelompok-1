@@ -1,5 +1,5 @@
 import Algo
-
+# Tes
 userData, gameData, kepemilikanData, riwayatData = Algo.load()
 role = ''
 saved = False
