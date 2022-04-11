@@ -26,8 +26,6 @@ def csv_to_arr(folder,filename):
                     tmp = ''
                 else:
                     tmp += c
-            if tmp:
-                arr += [tmp]
         count += 1
     # create matrix
     new_arr=[["" for j in range(kolom)] for i in range(length_of_obj(arr)//kolom)]
