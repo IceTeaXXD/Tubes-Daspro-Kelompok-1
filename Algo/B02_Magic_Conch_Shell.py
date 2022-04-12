@@ -1,5 +1,7 @@
 from .Functions import*
 
+# BELUM SESUAI SPESIFIKASI
+
 def kerangajaib():
     while True:
         tanya = input('Apa pertanyaanmu? ')
