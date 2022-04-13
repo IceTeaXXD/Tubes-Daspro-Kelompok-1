@@ -5,6 +5,8 @@ import math
 import time
 from datetime import date
 
+#tes
+
 def csv_to_arr(folder,filename):
     if filename == 'user' or filename == 'game':
         kolom = 6
