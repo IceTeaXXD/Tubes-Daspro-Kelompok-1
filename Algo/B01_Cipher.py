@@ -8,7 +8,7 @@ def searchIndex(char):
     for i in range(length_of_obj(chars_arr)):
         if chars_arr[i] == char:
             return i+1
-
+#mengenkripsi password yang terregister ke dalam userData
 def Cipher(text):
     cipheredText = ""
     a = 5
@@ -16,4 +16,13 @@ def Cipher(text):
     m = length_of_obj(chars_arr)
     for i in range(length_of_obj(text)):
         cipheredText += chars_arr[(searchIndex(text[i])*a + b)%m-1]
+    return cipheredText
+#mendekripsi data password pada userData
+def deCipher(text):
+    cipheredText = ""
+    a = 25
+    b = 1
+    m = length_of_obj(chars_arr)
+    for i in range(length_of_obj(text)):
+        cipheredText += chars_arr[round(a*((searchIndex(text[i])-b)))%m-1]
     return cipheredText
