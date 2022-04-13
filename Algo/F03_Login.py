@@ -13,7 +13,7 @@ def login(userData):
 
         # Check apakah username dan password valid dengan membandingkan data yang ada pada array userData
         for i in range(length_of_obj(userData)):
-            if username == userData[i][1] and Cipher(password) == userData[i][3]:
+            if username == userData[i][1] and password == deCipher(userData[i][3]):
                 print(f"Halo {username} selamat datang di BNMO!")
                 loginValid = True
                 indeks = i
