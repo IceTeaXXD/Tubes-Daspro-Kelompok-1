@@ -17,6 +17,7 @@ def Cipher(text):
     for i in range(length_of_obj(text)):
         cipheredText += chars_arr[(searchIndex(text[i])*a + b)%m-1]
     return cipheredText
+    
 #mendekripsi data password pada userData
 def deCipher(text):
     cipheredText = ""
