@@ -14,10 +14,6 @@ def search_game_at_store(gameData):
     arr_kategoriGame = []
     arr_tahunRilis = []
 
-    # if idGame == '' and namaGame == '' and hargaGame == '' and kategoriGame == '' and tahunRilis == '':
-    #     print('Maaf, id game, nama game, harga game, kategori game, dan tahun rilis tidak boleh kosong!')
-    #     return
-
     if length_of_obj(idGame) > 0:
         arr_idGame += [idGame]
     else:

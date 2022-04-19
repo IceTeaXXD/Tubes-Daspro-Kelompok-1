@@ -10,10 +10,6 @@ def search_my_game(gameData,riwayatData,userid,role):
 
         arr_my_game = list_game_dimiliki(gameData,riwayatData,userid)
         
-        # if idGame == '' and tahunRilis == '':
-        #     print('Maaf, id game dan tahun rilis tidak boleh kosong!')
-        #     return
-
         if idGame != '':
             arr_idGame += [idGame]
         else:
