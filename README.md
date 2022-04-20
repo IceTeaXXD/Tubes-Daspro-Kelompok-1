@@ -6,4 +6,4 @@
 - Ahmad Nadil - (16521516)
 - Haikal Ardzi Shofiyyurrohman - (16521524)
 - Athira Dhyannisa Takfir - (16521548)
-- Dhafin Gholib Luqman Hakim - (16521546)
+- Dhafin Ghalib Luqman Hakim - (16521546)
