@@ -20,9 +20,16 @@ def Cipher(text):
 # Mendekripsi data password pada userData
 def deCipher(text):
     cipheredText = ""
-    a = 25
+    a = inv(5,length_of_obj(chars_arr))
     b = 1
     m = length_of_obj(chars_arr)
     for i in range(length_of_obj(text)):
         cipheredText += chars_arr[round(a*((searchIndex(text[i])-b)))%m-1]
     return cipheredText
+
+# Mencari multiplication inverse dari a
+def inv(a,m):
+    y = 1
+    while (a*y) % m != 1:
+        y += 1
+    return y

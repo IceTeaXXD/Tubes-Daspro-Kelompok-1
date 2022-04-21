@@ -49,7 +49,7 @@ def saving(data,namaFolder,filename):
     for i in range(length_of_obj(data)):
         for j in range (length_of_obj(data[i])):
             f.write(str(data[i][j]))
-            if j == len(data[i])-1:
+            if j == length_of_obj(data[i])-1:
                 f.write('\n')
             else:
                 f.write(';')
@@ -202,11 +202,6 @@ def bikinTabel(list,jenisTabel):
             print('|',item[0],kaliString(' ',(longest0-length_of_obj(str(item[0])))),'|',item[1],kaliString(' ',(longest1-length_of_obj(str(item[1])))),'|',item[4],kaliString(' ',(longest2-length_of_obj(item[4]))),'|',item[5],kaliString(' ',(longest3-length_of_obj(str(item[5])))),'|')
         print(kaliString('=',longest0+longest1+longest2+longest3+17))
 
-def longestString(string,kali):
-    hasil = ''
-    for i in range(kali):
-        hasil += string
-    return hasil
 
 def hitungGame(gameData):
     jumlahGame = 0

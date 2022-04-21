@@ -1,6 +1,6 @@
 from .Functions import*
 
-def gambarPapan(arr):
+def gambarPapan(arr): # Fungsi untuk menggambar papan permainan
     print(arr[0] + '|' + arr[1] + '|' + arr[2])
     print(kaliString('-',3) + '+' + kaliString('-',3) + '+' + kaliString('-',3))
     print(arr[3] + '|' + arr[4] + '|' + arr[5])
@@ -8,12 +8,14 @@ def gambarPapan(arr):
     print(arr[6] + '|' + arr[7] + '|' + arr[8])
 
 def TicTacToe():
-    arr = ['   ' for i in range(9)]
+    arr = ['   ' for i in range(9)] # Inisiasi matriks arr kosong
     turn = 0
-    while True:
+    while True: # Looping permainan
         clear()
         gambarPapan(arr)
         turn += 1
+
+        # Kondisi Pemenang
         if arr[0] == arr[1] == arr[2] != '   ':
             print('Pemenangnya adalah ' + arr[0])
             break
@@ -42,6 +44,7 @@ def TicTacToe():
             print('Tidak ada pemenang')
             break
         
+        # Kondisi Giliran pemain
         if turn % 2 == 0:
             print('Giliran ' + 'X')
             char = ' X '
@@ -49,6 +52,7 @@ def TicTacToe():
             print('Giliran ' + 'O')
             char = ' O '
         
+        # Validasi input tempat
         while True:
             try:
                 pos = int(input('Pilih posisi: '))
