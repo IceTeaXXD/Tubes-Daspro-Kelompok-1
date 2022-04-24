@@ -1,3 +1,12 @@
+##### Modul List Game #####
+# Fungsi untuk melakukan pencarian game berdasarkan kategori dan disajikan dalam bentuk tabel
+
+##### KAMUS ARGUMENT #####
+# gameData : 2D Matrix of String
+# riwayatData : 2D Matrix of String
+# userid : String
+# role : String
+
 from .Functions import*
 
 def list_game(gameData,riwayatData,userid,role):

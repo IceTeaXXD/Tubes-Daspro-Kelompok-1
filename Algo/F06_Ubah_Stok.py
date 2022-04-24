@@ -1,10 +1,24 @@
+##### Modul Ubah Stok #####
+# Fungsi untuk melakukan pengubahan stok game pada database game yang ada
+
+##### KAMUS ARGUMEN #####
+# gameData : 2D Matrix of String
+# role : String
+
+##### KAMUS LOKAL #####
+# idGame,namaGame,kategori,tahunRilis,harga,stokAwal : String
+# stok, stokNow, indeks : Integer
+# sudahUbah : Boolean
+
 from .Functions import*
 
 def ubah_stok(gameData,role):
+    # Mengecek Apakah ada game yang tersimpan atau tidak
     if length_of_obj(gameData) == 0:
         print('Maaf, tidak ada data game yang tersimpan.')
     else:
         if role == "admin":
+            # Looping untuk mencari indeks game yang akan diubah sesuai dengan idGame yang diinput
             sudahUbah = False
             while not(sudahUbah):
                 idGame = input('Masukan id game yang akan diubah: ')
@@ -15,6 +29,7 @@ def ubah_stok(gameData,role):
                         break
 
                 if sudahUbah:
+                    # Perkondisian untuk melakukan manipulasi data stok
                     stok = int(input('Masukan stok baru: '))
                     if stok >= 0:
                         stokNow = int(gameData[indeks][5])

@@ -1,5 +1,10 @@
-import Algo
+##### Main Module #####
 
+##### KAMUS #####
+# userData, gameData, kepemilikanData, riwayatData : 2D Matrix of String
+# userid,username,nama,password,role,saldo : String
+
+import Algo
 userData, gameData, kepemilikanData, riwayatData = Algo.load()
 
 ### Data csv akan diubah menjadi sebuah matriks
@@ -30,7 +35,7 @@ userData, gameData, kepemilikanData, riwayatData = Algo.load()
 # riwayatData[x][1] = id game
 # riwayatData[x][2] = jumlah
 
-
+##### LOOPING MENU UTAMA #####
 role = ''
 saved = False
 

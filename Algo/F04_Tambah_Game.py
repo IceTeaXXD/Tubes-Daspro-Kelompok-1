@@ -1,3 +1,14 @@
+##### Modul Tambah Game #####
+# Fungsi untuk melakukan penambahan data game pada database
+
+##### KAMUS ARGUMEN #####
+# gameData : 2D Matrix of String
+# role : String
+
+##### KAMUS LOKAL #####
+# idGame,namaGame,kategori,tahunRilis,harga,stokAwal : String
+# jumlah_game : Integer
+
 from .Functions import*
 
 def tambah_game(gameData,role): # Menerima gameData dan role user sebagai parameter

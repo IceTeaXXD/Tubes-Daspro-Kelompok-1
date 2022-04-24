@@ -1,3 +1,22 @@
+###### Modul Register #####
+# Melakukan registrasi user baru
+
+##### KAMUS Argument #####
+# userData : 2D Matrix of String
+# role : String
+
+##### Kamus Lokal #####
+# length_of_obj : Integer -> Integer
+# Cipher : String -> String
+# data_user : String
+# username : String
+# password : String
+# nama : String
+# validasi_user : Boolean
+# count : Integer
+# char : String
+# i : Integer
+
 from .Functions import*
 from .B01_Cipher import*
 

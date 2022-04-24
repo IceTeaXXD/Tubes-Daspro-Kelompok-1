@@ -1,3 +1,9 @@
+##### MODUL HELP #####
+# Sebagai tampilan menu utama yang berdasarkan role user
+
+##### KAMUS ARGUMENT #####
+# role : String
+
 from .Functions import*
 
 def help(role):

@@ -1,3 +1,13 @@
+##### Modul Login #####
+# Fungsi untuk melakukan login user
+
+##### KAMUS ARGUMEN #####
+# userData : 2D Matrix of String
+
+##### KAMUS LOKAL ##### 
+# userid,username,nama,password,role,saldo : String
+# indeks : Integer
+
 from .Functions import*
 from .B01_Cipher import*
 

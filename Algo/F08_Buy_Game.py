@@ -1,7 +1,32 @@
+##### Modul Buy Game pada Toko #####
+# Fungsi untuk melakukan pembelian game
+
+##### KAMUS ARGUMENT #####
+# userData : 2D Matrix of String
+# gameData : 2D Matrix of String
+# kepemilikanData : 2D Matrix of String
+# riwayatData : 2D Matrix of String
+# userid : String
+# role : String
+# saldo : String
+
+##### KAMUS LOKAL #####
+# saldo_ : Integer
+# indeks : Integer
+# found : Boolean
+# idGame : String
+# hargaGame : Integer
+# stokGame : Integer
+# namaGame : String
+# tahun : String
+# temp_kepemilikan : 2D Matrix of String
+
+
 from .Functions import*
 
 def buy_game(userData,gameData,kepemilikanData,riwayatData,userid,role,saldo):
     if role == "user":
+        # Inisiasi variabel
         saldo_ = int(saldo)
         indeks = 0
         found = False
@@ -13,10 +38,12 @@ def buy_game(userData,gameData,kepemilikanData,riwayatData,userid,role,saldo):
                 found = True
                 break
         
+        # Inisiasi variabel
         hargaGame = int(gameData[indeks][4])
         stokGame = int(gameData[indeks][5])
         namaGame = gameData[indeks][1]
 
+        # Perkondisian jika telah memiliki game yang akan dibeli
         if isOwned(kepemilikanData,idGame,userid):
             print('Anda sudah memiliki game tersebut!')
                 

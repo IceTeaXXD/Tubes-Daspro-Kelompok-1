@@ -1,15 +1,34 @@
+##### Modul Search My Game #####
+# Fungsi untuk melakukan pencarian game berdasarkan kategori dan disajikan dalam bentuk tabel
+
+##### KAMUS ARGUMENT #####
+# gameData : 2D Matrix of String
+# riwayatData : 2D Matrix of String
+# userid : String
+# role : String
+
+##### KAMUS LOKAL #####
+# idGame : String
+# tahunRilis : String
+# arr_search : 2D Matrix of String
+# arr_idGame : 2D Matrix of String
+# arr_tahunRilis : 2D Matrix of String
+# arr_my_game : 2D Matrix of String
+
 from .Functions import*
 
 def search_my_game(gameData,riwayatData,userid,role):
     if role == "user":
+        # Inisiasi variabel
         idGame = input('Masukan id game: ')
         tahunRilis = input('Masukan tahun rilis: ')
         arr_search = []
         arr_idGame = []
         arr_tahunRilis = []
 
-        arr_my_game = list_game_dimiliki(gameData,riwayatData,userid)
+        arr_my_game = list_game_dimiliki(gameData,riwayatData,userid) # Mencari game yang telah dimiliki
         
+        # Melakukan pengolahan data pada argument yang diberikan
         if idGame != '':
             arr_idGame += [idGame]
         else:

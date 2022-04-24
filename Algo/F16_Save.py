@@ -1,3 +1,20 @@
+##### MODUL SAVE #####
+# Menyimpan data ke dalam file
+
+##### KAMUS ARGUMENT #####
+# userData : 2D Matrix of String
+# gameData : 2D Matrix of String
+# kepemilikanData : 2D Matrix of String
+# riwayatData : 2D Matrix of String
+
+##### KAMUS LOKAL #####
+# path : String
+# userData : 2D Matrix of String
+# gameData : 2D Matrix of String
+# kepemilikanData : 2D Matrix of String
+# riwayatData : 2D Matrix of String
+
+
 from .Functions import*
 
 def save(userData,gameData,kepemilikanData,riwayatData):

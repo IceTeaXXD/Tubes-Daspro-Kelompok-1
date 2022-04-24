@@ -1,3 +1,12 @@
+##### MODUL LOAD #####
+# Melakukan load data dari folder
+
+##### KAMUS LOKAL #####
+# userData : 2D Matrix of String
+# gameData : 2D Matrix of String
+# kepemilikanData : 2D Matrix of String
+# riwayatData : 2D Matrix of String
+
 from .Functions import*
 
 def load():

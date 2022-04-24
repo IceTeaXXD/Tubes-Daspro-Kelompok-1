@@ -1,3 +1,13 @@
+##### MODUL EXIT #####
+# Fungsi untuk keluar dari program
+
+##### KAMUS ARGUEMTN #####
+# userData : 2D Matrix of String
+# gameData : 2D Matrix of String
+# kepemilikanData : 2D Matrix of String
+# riwayatData : 2D Matrix of String
+# saved : Boolean
+
 from .Functions import*
 from .F16_Save import*
 
