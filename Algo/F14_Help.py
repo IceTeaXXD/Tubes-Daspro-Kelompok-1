@@ -9,7 +9,7 @@ from .Functions import*
 def help(role):
     print('==========H E L P==========')
     if role == 'user':
-        print('1.Login - Untuk login ke akun')
+        print('1. Login - Untuk login ke akun')
         print('2. Listing Game Toko 0 - Untuk menampilkan daftar game yang tersedia di toko')
         print('3. Beli Game - Untuk membeli game')
         print('4. Lihat Game Saya - Untuk melihat daftar game yang telah dibeli')
