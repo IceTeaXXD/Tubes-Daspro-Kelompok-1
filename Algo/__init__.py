@@ -1,4 +1,5 @@
 from Algo.Functions import*
+from Algo.Menu import*
 from Algo.F02_Register import*
 from Algo.F03_Login import*
 from Algo.F04_Tambah_Game import*

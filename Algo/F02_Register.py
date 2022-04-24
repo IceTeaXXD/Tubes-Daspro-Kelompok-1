@@ -6,9 +6,6 @@
 # role : String
 
 ##### Kamus Lokal #####
-# length_of_obj : Integer -> Integer
-# Cipher : String -> String
-# data_user : String
 # username : String
 # password : String
 # nama : String

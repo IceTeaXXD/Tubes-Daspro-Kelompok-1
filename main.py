@@ -41,7 +41,7 @@ saved = False
 
 while True:
     Algo.clear()
-    Algo.help(role)
+    Algo.menu(role)
     Algo.batas()
     pilih = input('Pilih nomor menu: ')
     Algo.batas()
@@ -50,7 +50,7 @@ while True:
         if pilih == '1':
             userid,username,nama,password,role,saldo = Algo.login(userData)
         elif pilih == '2':
-            Algo.help(role)
+            Algo.menu(role)
 
     elif role == 'admin':
         if pilih == '1':
