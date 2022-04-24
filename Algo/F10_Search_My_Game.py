@@ -1,5 +1,5 @@
 ##### Modul Search My Game #####
-# Fungsi untuk melakukan pencarian game berdasarkan kategori dan disajikan dalam bentuk tabel
+# Fungsi untuk melakukan pencarian game yang dimiliki berdasarkan id dan tahun dan disajikan dalam bentuk tabel
 
 ##### KAMUS ARGUMENT #####
 # gameData : 2D Matrix of String

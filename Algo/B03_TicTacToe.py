@@ -1,5 +1,11 @@
 from .Functions import*
 
+##### KAMUS LOKAL #####
+# arr = Array of String
+# turn = Integer
+# pos = Integer
+# char = String
+
 def gambarPapan(arr): # Fungsi untuk menggambar papan permainan
     print(arr[0] + '|' + arr[1] + '|' + arr[2])
     print(kaliString('-',3) + '+' + kaliString('-',3) + '+' + kaliString('-',3))

@@ -1,5 +1,15 @@
 from .Functions import*
 
+##### KAMUS LOKAL #####
+# tanya = String
+# x = Integer
+# a = Integer
+# c = Integer
+# m = Integer
+# LCG = Integer
+# n = Integer
+# jawaban = Array of String
+
 def kerangajaib():
     while True:
         tanya = input('Apa pertanyaanmu? ')

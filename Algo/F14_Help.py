@@ -1,5 +1,5 @@
 ##### MODUL HELP #####
-# Sebagai tampilan menu utama yang berdasarkan role user
+# Memberi penjelasan atas menu yang ada
 
 ##### KAMUS ARGUMENT #####
 # role : String
