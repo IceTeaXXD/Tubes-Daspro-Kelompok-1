@@ -9,7 +9,7 @@
 - Athira Dhyannisa Takfir - (16521548)
 
 ## Cara Menjalankan Program
-1. Buka terminal, disarankan menggunaakan IDE VScode
+1. Buka source code pada terminal. Untuk menjalankan program, harap buka semua file yang ada sekaligus. Terminal disarankan menggunakan IDE Visual Studio Code untuk mempermudah.
 2. Run program secara manual dengan format py main.py `nama database`
 
     ```
